@@ -1,0 +1,94 @@
+/* Additional custom styling beyond Bootstrap */
+
+body {
+    padding-bottom: 70px;
+}
+
+.card {
+    border-width: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.instructions li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.detective-image {
+    max-width: 120px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ai-methods li {
+    margin-bottom: 0.75rem;
+}
+
+#historyList .list-group-item {
+    transition: background-color 0.3s;
+}
+
+#historyList .list-group-item:hover {
+    background-color: var(--bs-dark);
+}
+
+.correct-prediction {
+    border-left: 5px solid var(--bs-success);
+}
+
+.incorrect-prediction {
+    border-left: 5px solid var(--bs-danger);
+}
+
+.progress {
+    height: 25px;
+    background-color: var(--bs-dark);
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
+
+/* Fun animations for children */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructions li, .ai-methods li {
+        font-size: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
